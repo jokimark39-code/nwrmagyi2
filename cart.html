@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>My Cart - နွားမကြီး</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Chewy&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body style="padding-bottom: 20px; background-color: var(--white);"> <header class="cart-header">
+        <a href="index.html" class="back-btn">
+            <ion-icon name="chevron-back-outline"></ion-icon> Back
+        </a>
+        <h2 class="cart-title">My Cart</h2>
+        <div style="width: 70px;"></div> </header>
+
+    <main class="cart-page">
+        
+        <div id="emptyCartState" class="empty-cart-state" style="display: none;">
+            <div class="empty-icon-wrapper">
+                <ion-icon name="cart-outline"></ion-icon>
+            </div>
+            <h3>Your cart is empty</h3>
+            <p>Looks like you haven't added any treats yet.</p>
+            <a href="index.html" class="go-shopping-btn">Go Shopping</a>
+        </div>
+
+        <div id="cartItemsContainer" class="cart-items-list">
+            </div>
+
+    </main>
+
+    <div id="bottomCheckoutCard" class="bottom-checkout-card">
+        <section class="fulfillment-section">
+            <h3 class="section-heading">Fulfillment Method</h3>
+            <div class="fulfillment-options">
+                <label class="fulfill-label">
+                    <input type="radio" name="fulfillment" value="delivery" id="radioDelivery" checked>
+                    <div class="fulfill-card">
+                        <ion-icon name="car-outline"></ion-icon>
+                        <span>Delivery</span>
+                    </div>
+                </label>
+                <label class="fulfill-label">
+                    <input type="radio" name="fulfillment" value="pickup" id="radioPickup">
+                    <div class="fulfill-card">
+                        <ion-icon name="storefront-outline"></ion-icon>
+                        <span>Pick Up</span>
+                    </div>
+                </label>
+            </div>
+        </section>
+
+        <section class="order-summary">
+            <div class="summary-row">
+                <span class="summary-label">Subtotal</span>
+                <span class="summary-value" id="subtotalDisplay">0 Ks</span>
+            </div>
+            <div class="summary-row" id="deliveryFeeRow">
+                <span class="summary-label">Delivery Charge</span>
+                <span class="summary-value" id="deliveryFeeDisplay">5,000 Ks</span>
+            </div>
+            <hr class="summary-divider">
+            <div class="summary-row total-row">
+                <span class="summary-label">Total Amount</span>
+                <span class="summary-value total-price" id="totalAmountDisplay">0 Ks</span>
+            </div>
+        </section>
+
+        <button class="checkout-btn">
+            Checkout <ion-icon name="arrow-forward-outline"></ion-icon>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
